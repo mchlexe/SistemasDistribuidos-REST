@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
       autoIncrement: true
     },
     bookId: {
-      type: Sequelize.BIGINT,
+      type: Sequelize.STRING,
       allowNull: false,
       allowEmpty: false
     },
