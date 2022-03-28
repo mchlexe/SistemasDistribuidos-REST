@@ -55,7 +55,9 @@ const comentariosController = require('../controllers/comentariosController');
  *                 comentario:
  *                   $ref: '#/components/schemas/Comentario'
 */
-router.post('/', comentariosController.comentarioCreate);
+router.post('/', () => {
+    comentariosController.comentarioCreate();
+});
 
 /**
  * @swagger
