@@ -6,7 +6,7 @@ var logger = require('morgan');
 var dotenv = require('dotenv');
 var swaggerJSDoc = require('swagger-jsdoc');
 var swaggerUi = require('swagger-ui-express');
-var cors = require('cors');
+// var cors = require('cors');
 
 var indexRouter = require('./routes/index.js');
 var comentarioRouter = require('./routes/comentarios');
@@ -34,8 +34,8 @@ var swaggerDefinition = {
       url: 'https://github.com/mchlexe/SistemasDistribuidos-REST',
     },
     contact: {
-      name: 'Michel Moreira',
-      url: 'https://github.com/mchlexe',
+      name: 'AmandaMichel',
+      url: 'https://github.com/mchlexe/SistemasDistribuidos-REST',
     },
   },
   servers: [
@@ -55,7 +55,7 @@ var swaggerSpec = swaggerJSDoc(options);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(cors());
+// app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -1,7 +1,11 @@
 
 import { writable } from 'svelte/store';
 
-export const token = writable(0);    
 export const logged = writable(false);
 export const username = writable('username');
-export const input = writable(0);
+export const titulo = writable('Título');
+export const autor = writable('Autor');
+export const capa = writable('img');
+export const sinopse = writable('Sinopse');
+export const bookId = writable('id');
+export const books = writable([]);

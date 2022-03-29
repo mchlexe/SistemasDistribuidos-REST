@@ -1,21 +1,11 @@
 <script>
-    
-    import { onMount } from 'svelte';
-    import { writable, derived } from 'svelte/store'
     import { Router, Route } from 'svelte-navigator';
-
     import Livros from './routes/Livros.svelte';
+    import Livro from './routes/Livro.svelte';
     import Navbar from './routes/components/Navbar.svelte';
     import Login from './routes/components/Login.svelte';
-    import { logged, token, username } from './routes/components/stores';
+    import { logged, username } from './routes/components/stores';
 
-
-    const usersApiData = writable([]);
-    let users; 
-
-    onMount(async () => {
-        
-    });
 </script>
 
 <main>
@@ -32,9 +22,9 @@
             {/if}
         </Route>
             
-        <Route path="livros">
-            <Livros />
-        </Route>  
+        <Route path="livro">
+            <Livro />
+        </Route>
     </Router>
     
     
@@ -43,7 +33,7 @@
 
 <style>
     .greet, .msg {
-        margin-top: 10%;
+        margin-top: 3%;
     }
 
 </style>

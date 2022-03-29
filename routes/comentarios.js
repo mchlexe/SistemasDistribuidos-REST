@@ -6,9 +6,9 @@
  *       type: object
  *       properties:
  *         bookId:
- *           type: integer
+ *           type: string
  *           description: ID do livo (Google Books API).
- *           example: 1
+ *           example: VRjuAAAAMAAJ
  *         username:
  *           type: string
  *           description: Nome do usuário que fez o comentário.
@@ -55,9 +55,7 @@ const comentariosController = require('../controllers/comentariosController');
  *                 comentario:
  *                   $ref: '#/components/schemas/Comentario'
 */
-router.post('/', () => {
-    comentariosController.comentarioCreate();
-});
+router.post('/', comentariosController.comentarioCreate);
 
 /**
  * @swagger
@@ -87,9 +85,9 @@ router.delete('/:id', comentariosController.comentarioDelete);
  *       - in: path
  *         name: bookId
  *         required: true
- *         description: ID numérico do livro para recuperar seus comentários.
+ *         description: ID do livro para recuperar seus comentários.
  *         schema:
- *           type: integer
+ *           type: string
  *     responses:
  *       200:
  *         description: Uma lista de comentários.
